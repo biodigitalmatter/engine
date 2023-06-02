@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "engine"
+version = "0.1.0"
+description = ""
+authors = [{name = "Anton Tetov", email =  "anton@tetov.se" }]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    # "pyopenvdb", # use python -m venv .venv --use-site-pac
+    "compas_rrc"
+]
+
+[project.optional-dependencies]
+dev = ["black", "pytest", "isort"]
+
+[tool.pydocstyle]
+ignore = "D1"
